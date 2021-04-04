@@ -3,6 +3,8 @@ For Uncommon Hack 2021
 
 The current working code is **App_vBeta**
 
+Run: `__init__.py` under `App_vBeta`
+
 ## Instructions
 ### Control
 + Player 1 : w-s-a-d
@@ -17,7 +19,7 @@ The current working code is **App_vBeta**
   + bomb
 
 ### Goal
-+ Be more human-like!
++ Be more **human-like**!
 
 ## Inspiration
 
