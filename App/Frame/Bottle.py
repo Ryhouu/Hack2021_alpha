@@ -1,5 +1,5 @@
 from _config import BOTTLE
-from Component import Component
+from Frame.Component import Component
 import random
 
 class Bottle(Component) :
@@ -11,16 +11,19 @@ class Bottle(Component) :
 
     def getAttr(self) -> str :
         return self.attr
-
+    
+    def isMemory(self):
+        return self.attr == "memory"
+    
+    def isBomb(self):
+        return self.attr == "bomb"
+    
 
 class RandBottle (object) :
     def __init__(self) -> None:
         super().__init__()
 
     def rand(self) :
-        x = random.randint(0, 1)
-        return Bottle (str(x))
-
-
-b = RandBottle().rand()
-print (b.attr)
+        x = random.randint(1, 100)
+        a = "memory" if x > BOTTLE.pBomb else "bomb" 
+        return Bottle (a)

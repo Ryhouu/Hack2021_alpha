@@ -1,8 +1,18 @@
-from _config import Robot
+import sys
+sys.path.append(".")
+
+
+import os
+
+
+print ("this is a test for branch theta")
+
+print (os.getcwd())
 # from Frame.Player import Player
 
-print (Robot.default_memory)
+# from Service import InitMaze as im
+# im.run()
 
-# print (Player.test())
-def create_session():
-    pass
+from Session import Sess
+Sess.run()
+
