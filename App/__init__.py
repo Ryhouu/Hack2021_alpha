@@ -6,3 +6,5 @@ print (Robot.default_memory)
 # print (Player.test())
 def create_session():
     pass
+
+print ("Theta")
