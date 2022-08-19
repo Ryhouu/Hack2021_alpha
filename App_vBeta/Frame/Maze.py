@@ -55,7 +55,7 @@ class Maze(Component) :
                 if rawMat[i][j] == 0 :
                     self.mat[i][j] = Entry ("wall")
                     self.mat[i][j].setColor(MAZE.wall_color)
-                    if self.isValidEntry(i, j):
+                    if i >= 1 and i <= MAZE.width - 2 and j >= 1 and j <= MAZE.width - 2 :
                         p = random.randint(1, 100)
                         if p <= BOTTLE.pChamber :
                             self.mat[i][j].add_chamber()
@@ -63,10 +63,6 @@ class Maze(Component) :
                 elif rawMat[i][j] == 1 :
                     self.mat[i][j] = Entry ("path")
                     self.mat[i][j].setColor(MAZE.path_color)
-    
-    
-    def isValidEntry(self, x, y) :
-        return x > 0 and y > 0 and x < MAZE.width - 1 and y < MAZE.height - 1
 
     def tester (self) :
         self.mat[0][0] = Entry("path")
