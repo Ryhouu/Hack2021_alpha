@@ -1,4 +1,4 @@
-patch-1
+main
 def compare_human_index (human, robot):
     ##define two local variables to store the human index of the human&robot
     human_index=human.memory-human.speed-human.vision
@@ -44,8 +44,7 @@ class GameOver():
             print("%s, lose the game", player.identity)
         else：
             return None
-    
-=======
+
 from Frame import Player, Bottle, Maze
 
 def get_winner_HI(human : Player, robot : Player):
@@ -95,4 +94,5 @@ def check(maze, human : Player, robot : Player) :
 
     
 
+main
 main
